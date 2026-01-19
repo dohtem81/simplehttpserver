@@ -21,3 +21,27 @@ Your HTML files will be served from this folder.
 ## Customizing Your Page
 
 Edit `index.html` to experiment with your own HTML and CSS styles. You can change the font, colors, and layout as you learn HTML.
+
+## Using Docker Compose
+
+1. Build and run with Docker Compose:
+
+```bash
+docker compose up -d --build
+```
+
+2. The server will be available at:
+
+```text
+http://localhost:8000
+```
+
+3. Stop the service with:
+
+```bash
+docker compose down
+```
+
+Notes:
+- The current directory is mounted read-only into the container so files are served but not modified by the container.
+- If you want live-editing from the host, change the volume to `.:/usr/src/app:rw`.
